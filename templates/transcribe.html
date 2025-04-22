@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Transcribe Audio/Video</h1>
+<p class="lead">Upload your audio or video file to transcribe it.</p>
+
+<div class="card">
+    <div class="card-body">
+        <form action="{{ url_for('transcribe') }}" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Select File</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".mp3,.mp4,.wav,.avi,.mkv,.mov,.wmv">
+                <div class="form-text">Supported formats: MP3, MP4, WAV, AVI, MKV, MOV, WMV</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload & Transcribe</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

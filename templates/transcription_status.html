@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Transcription in Progress</h1>
+<p class="lead">Please wait while we transcribe your file. This may take a few minutes depending on the file size.</p>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+</div>
+
+<div class="text-center mt-4">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Processing your file...</p>
+</div>
+
+<script>
+    // Check status every 5 seconds
+    setInterval(function() {
+        window.location.reload();
+    }, 5000);
+</script>
+{% endblock %}

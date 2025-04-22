@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Neural Transcript Processor</h1>
+    <p class="lead">
+        A powerful tool for transcribing, summarizing, and analyzing audio and video content.
+    </p>
+    <hr class="my-4">
+    <p>
+        Upload your audio or video files to get started. Our advanced AI models will transcribe your content
+        and provide tools for summarization, question answering, sentiment analysis, and more.
+    </p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('transcribe') }}" role="button">Get Started</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-microphone"></i> Transcription</h5>
+                <p class="card-text">Convert speech to text with high accuracy using state-of-the-art AI models.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-alt"></i> Summarization</h5>
+                <p class="card-text">Generate concise summaries of your transcripts to extract key information.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-question-circle"></i> Q&A</h5>
+                <p class="card-text">Ask questions about your transcript and get accurate answers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-chart-bar"></i> Sentiment Analysis</h5>
+                <p class="card-text">Analyze the emotional tone of your transcript to understand sentiment.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-cloud"></i> Word Cloud</h5>
+                <p class="card-text">Visualize the most frequent words in your transcript with a word cloud.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-exchange-alt"></i> Comparison</h5>
+                <p class="card-text">Compare multiple transcripts to find similarities and differences.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
