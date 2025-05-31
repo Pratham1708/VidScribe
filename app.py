@@ -33,7 +33,7 @@ import time
 nltk.download('punkt', quiet=True)
 
 # Configure API keys
-ASSEMBLYAI_API_KEY = "94fe5e0eb7394aa8b10b3c81bbebd8bf"  # Replace with your actual key
+ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API")  # Replace with your actual key
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 
 # Configure Flask app
