@@ -1,36 +1,38 @@
-# 🎥 VidScribe
 
-**VidScribe** is an AI-powered Flask web application that transforms audio and video files into intelligent, structured insights. Beyond simple transcription, VidScribe enables summarization, question answering, sentiment analysis, and semantic comparison of transcripts through advanced NLP models.
+# 🎥 VidScribe AI
 
-It is designed as a multi-stage transcript intelligence system that converts unstructured speech into searchable, interactive knowledge.
+VidScribe is an AI-powered web application that converts audio and video files into structured, searchable knowledge. 
+It goes beyond simple transcription by applying advanced Natural Language Processing (NLP) techniques such as 
+summarization, question answering, sentiment analysis, and semantic similarity comparison.
 
 ---
 
 ## 🚀 Features
 
-- 🎙 **Audio & Video Transcription**  
-  Upload media files and automatically generate transcripts using speech-to-text integration.
+- 🎙 Audio & Video Transcription (AssemblyAI Integration)
+- 🧠 AI-Based Summarization (Transformer Models)
+- ❓ Contextual Question Answering
+- 😊 Sentiment Analysis
+- 📊 Word Cloud Generation
+- 🔎 Semantic Transcript Comparison
+- 💬 Interactive Chat Interface
+- ⚡ Asynchronous Background Task Processing
 
-- 🧠 **AI-Powered Summarization**  
-  Generate concise summaries from long transcripts using transformer-based models.
+---
 
-- ❓ **Contextual Question Answering**  
-  Ask questions about your transcript and receive context-aware answers.
+## 🏗 System Overview
 
-- 😊 **Sentiment Analysis**  
-  Analyze emotional tone across different parts of the transcript.
+VidScribe follows a multi-stage AI pipeline:
 
-- 📊 **Word Cloud Generation**  
-  Visualize key terms and frequently used words.
-
-- 🔎 **Semantic Transcript Comparison**  
-  Compare two transcripts and measure content similarity.
-
-- 💬 **Interactive Chat Interface**  
-  Chatbot-style assistant for guiding transcript analysis.
-
-- ⚡ **Asynchronous Processing**  
-  Background task handling for smooth user experience during AI processing.
+1. User uploads audio/video file  
+2. Speech-to-text transcription  
+3. Transcript storage  
+4. AI processing:
+   - Summarization
+   - Question Answering
+   - Sentiment Analysis
+   - Semantic Similarity
+5. Results displayed via web interface
 
 ---
 
@@ -39,111 +41,120 @@ It is designed as a multi-stage transcript intelligence system that converts uns
 ### Backend
 - Python
 - Flask
-- Transformers (HuggingFace)
 - PyTorch
+- HuggingFace Transformers
 - Sentence Transformers
-- AssemblyAI (Speech-to-Text API)
+- AssemblyAI API
 
 ### Frontend
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
-- Jinja2 Templating
+- Jinja2 Templates
 
 ---
 
 ## 📂 Project Structure
 
-
+```
 VidScribe/
 │
-├── app.py # Main Flask application
-├── requirements.txt # Project dependencies
+├── app.py
+├── requirements.txt
 │
 ├── static/
-│ ├── css/
-│ │ └── style.css # Styling
-│ └── js/
-│ ├── chatbot.js # Chatbot UI logic
-│ └── transcript.js # Transcript handling
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── chatbot.js
+│       └── transcript.js
 │
 ├── templates/
-│ ├── base.html # Base layout
-│ ├── index.html # Home page
-│ ├── transcribe.html # File upload page
-│ ├── transcript.html # Transcript display
-│ └── transcription_status.html # Status page
+│   ├── base.html
+│   ├── index.html
+│   ├── transcribe.html
+│   ├── transcript.html
+│   └── transcription_status.html
 │
-└── uploads/ # Uploaded media files
-
+└── uploads/
+```
 
 ---
 
-## ⚙️ Getting Started
+## ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone Repository
 
-```bash
+```
 git clone https://github.com/Pratham1708/VidScribe.git
 cd VidScribe
-2️⃣ Create a Virtual Environment
+```
+
+### 2️⃣ Create Virtual Environment
+
+```
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3️⃣ Install Dependencies
+source venv/bin/activate      # Windows: venv\Scripts\activate
+```
+
+### 3️⃣ Install Dependencies
+
+```
 pip install -r requirements.txt
-4️⃣ Set Environment Variable
+```
 
-Set your AssemblyAI API key:
+### 4️⃣ Set Environment Variable
 
-Mac/Linux
-
+Mac/Linux:
+```
 export ASSEMBLYAI_API=your_api_key
+```
 
-Windows
-
+Windows:
+```
 set ASSEMBLYAI_API=your_api_key
-5️⃣ Run the Application
+```
+
+### 5️⃣ Run Application
+
+```
 python app.py
+```
 
-Open your browser and visit:
-
+Open browser at:
 http://127.0.0.1:5000/
-📌 Use Cases
 
-Lecture transcription & revision
+---
 
-Meeting intelligence
+## 📌 Use Cases
 
-Research discussion analysis
+- Lecture transcription & revision
+- Meeting summarization
+- Research discussions
+- Podcast analysis
+- Content indexing
+- Media comparison
 
-Podcast summarization
+---
 
-Content indexing & comparison
+## 🔮 Future Improvements
 
-🔮 Future Enhancements
+- Chunk-based hierarchical summarization
+- Retrieval-Augmented Generation (RAG)
+- Speaker diarization
+- Database-backed storage
+- React frontend
+- Mobile integration
+- Performance dashboard
 
-Chunk-based hierarchical summarization
+---
 
-Retrieval-Augmented Question Answering (RAG)
+## 📄 License
 
-Speaker diarization
+MIT License
 
-Database-backed transcript storage
+---
 
-React-based frontend
+## 👨‍💻 Author
 
-Mobile application integration
-
-Performance benchmarking dashboard
-
-📄 License
-
-This project is licensed under the MIT License.
-
-🙌 Acknowledgements
-
-Flask Documentation: https://flask.palletsprojects.com/
-
-HuggingFace Transformers
-
-AssemblyAI Speech-to-Text API
+Pratham Jindal  
